@@ -1,0 +1,22 @@
+1. Apa tantangan terbesar yang pernah Anda temui saat membuat web application dari sisi engineering dan bagaimana menyelesaikan permasalahan tersebut?.
+Dukungan API yang berubah — ubah dan prioritas para browser vendor menyebabkan kesulitan dalam membangun sebuah pengalaman yang konsisten,
+yang dilakukan yaitu mengupgrade versi API agar kompatibel dengan browser yang digunakan
+2. Apakah Anda sudah mengetahui tentang clean code? Bagaimana implementasi clean code pada project Anda?.
+Ya, saya sudah mengetahui clean code. Cara saya mengimplementasi clean code pada project yaitu membuat nama variabel konsisten dan jelas tujuannya. Tidak membuat code yang akan membuat waktu eksekusi menjadi lama. Code yang tidak terpakai dihapus
+3. Apakah Anda menggunakan Git workflow dalam pengerjaan project? Jika ya, jelaskan bagaimana Git workflow yang Anda terapkan.
+Ya, saya menggunakan git workflow dalam pengerjaan project. Di dalam git workflow yang diterapkan terdapat 3 branch yaitu master, develop, feature.
+master merupakan branch utama atau branch produksi, develop branch untuk staging, feature branch untuk developer mengupload codenya seperti : feature/get-all-book.js.
+Kemudian feature branch dilakukan testing terhadap branch develop, jika tidak ada error maka akan di merge di branch develop. Jika ada perubahan di develop branch, developer akan melakukan pull untuk update di local repository
+4. Apa yang anda ketahui dengan design pattern? Jika pernah menggunakan, jelaskan design pattern apa saja yang biasanya digunakan untuk menyelesaikan masalah software engineering di web application.
+Bentuk solusi berupa desain yang digunakan untuk memecahkan permasalahan yang biasa terjadi dalam desain perangkat lunak berorientasi objek, sehingga solusi yang sudah dibuat dapat digunakan kembali untuk memecahkan masalah yang serupa.
+- Singleton
+  Biasanya jika menggunakan front-end framework seperti React atau Angular, karena sulit intuk menangani logs dari beberapa komponen.
+- Strategy
+  Biasanya digunakan untuk sistem proses pembayaran seperti shopping cart, dengan desain pattern ini memungkinkan kita memisahkan metode pembayaran dari proses checkout
+- Observer
+  Biasanya digunakan untuk pola MVC (Model, View, Controller)
+- Decorator
+  Bisa digunakan pada pembelian makanan secara online, seperti penambahan topping sesuai keinginan, namun hanya permenu, website tidak akan menambah topping untuk semua menu yang dipilih
+5. Apa anda bersedia ditempatkan onsite di Malang? Jika memang harus remote, bagaimana pengaturan waktu & availability dalam komunikasi dan kolaborasi pengerjaan project?.
+Ya bersedia. Jika harus remote, untuk pengaturan waktu akan ditentukan oleh perusahaan. Jika jam kerja flexible, pekerjaan akan saya kerjakan sesuai dengan jam kerja.
+Availability dalam komunikasi dan kolaborasi pengerjaan project bisa menggunakan telegram dan gitlab/git Mocogawe atau aplikasi yang sudah ditentukan oleh perusahaan
