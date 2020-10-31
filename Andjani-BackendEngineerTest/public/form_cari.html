@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Aplikasi Cari Kota</title>
+        <script
+			  src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <h1>API RajaOngkir</h1>
+        <label id="pilih_prov" for="provinsi">Pilih provinsi
+            <select name="provinsi" id="provinsi">
+                <option>Pilih Provinsi</option>
+            </select>
+        </label>
+        <label id="pilih_kot" style="display:none">Pilih Kota
+            <select name="kota" id="kota">
+
+            </select>
+        </label>
+    </body>
+
+<script>
+    getDataProv=()=>{
+        $.ajax({
+            url:"http://127.0.0.1:3000/api/provinsi/all",
+            method : "GET",
+            success:function(response){
+                response.map(d=>{
+                    $("#provinsi").append("<option value='"+d.province_id+"'>"+d.province+"</option>")
+                })
+            },
+            error:function(xhr,status,error){
+                console.log(xhr.responseText)
+            }
+        })
+    }
+
+    $(document).ready(function(){
+        console.log("ready");
+        getDataProv();
+
+        $("#provinsi").change(function(){
+            var pilihan = $(this).children("option:selected").val();
+            $.ajax({
+            url:"http://127.0.0.1:3000/api/kota/"+pilihan,
+            method : "GET",
+            success:function(response){
+                $("#pilih_kot").css({display:"block"})
+                $("#kota").html("");
+                response.map(d=>{
+                    $("#kota").append("<option value='"+d.city_id+"'>"+d.city_name+"</option>")
+                })
+            },
+            error:function(xhr,status,error){
+                console.log(xhr.responseText)
+            }
+        })
+        })
+    })
+</script>
+</html>
